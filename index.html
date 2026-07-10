@@ -2,47 +2,146 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>근무 편성 조회</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>근무편성 조회</title>
+
+
+<style>
+
+body{
+    font-family:"Malgun Gothic", Arial, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f5f5f5;
+}
+
+
+.container{
+    max-width:420px;
+    margin:auto;
+}
+
+
+h1{
+    text-align:center;
+}
+
+
+input{
+
+    width:100%;
+    padding:12px;
+
+    font-size:18px;
+
+    box-sizing:border-box;
+
+}
+
+
+button{
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:12px;
+
+    font-size:18px;
+
+    border:0;
+
+    border-radius:8px;
+
+    background:#1976d2;
+
+    color:white;
+
+}
+
+
+.box{
+
+    background:white;
+
+    margin-top:15px;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    box-shadow:0 2px 5px #ccc;
+
+}
+
+
+.title{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    border-bottom:1px solid #ddd;
+
+    padding-bottom:8px;
+
+    margin-bottom:10px;
+
+}
+
+
+.member{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+</style>
+
+
 </head>
+
 
 <body>
 
+
 <div class="container">
 
-    <h1>📅 근무 편성 조회</h1>
 
-    <label>조회 날짜</label>
-    <input type="date" id="date">
+<h1>
+근무편성 조회
+</h1>
 
-    <div class="card">
 
-        <h3>🌞 주간 (갑반)</h3>
-        <ul id="dayList">
-            <li>날짜를 선택하세요.</li>
-        </ul>
+<input 
+type="date" 
+id="date"
+onchange="searchWork()">
 
-        <hr>
 
-        <h3>🌙 야간 (을반)</h3>
-        <ul id="nightList">
-            <li>날짜를 선택하세요.</li>
-        </ul>
 
-        <hr>
+<button onclick="searchWork()">
+조회
+</button>
 
-        <h3>😴 비번 (병반)</h3>
-        <ul id="offList">
-            <li>날짜를 선택하세요.</li>
-        </ul>
 
-    </div>
+
+<div id="result"></div>
+
 
 </div>
 
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
