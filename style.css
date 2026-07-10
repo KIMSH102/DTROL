@@ -1,0 +1,76 @@
+body{
+    margin:0;
+    padding:30px;
+    background:#f2f5f8;
+    font-family:Arial, sans-serif;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#1f2937;
+}
+
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input[type=date]{
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+}
+
+.card{
+
+    margin-top:25px;
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+
+}
+
+h3{
+
+    margin-top:25px;
+
+    color:#2563eb;
+
+}
+
+ul{
+
+    padding-left:20px;
+
+}
+
+li{
+
+    margin:6px 0;
+
+}
+
+hr{
+
+    margin-top:20px;
+
+    border:none;
+
+    border-top:1px solid #ddd;
+
+}
