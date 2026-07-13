@@ -40,35 +40,59 @@ input{
 }
 
 button{
+
     flex:1;
+
     padding:12px;
+
     font-size:18px;
+
     border:0;
+
     border-radius:8px;
+
     background:#1976d2;
+
     color:white;
+
     cursor:pointer;
+
 }
 
 .box{
+
     background:white;
+
     margin-top:15px;
+
     padding:15px;
+
     border-radius:10px;
+
     box-shadow:0 2px 5px #ccc;
+
 }
 
 .title{
+
     font-size:20px;
+
     font-weight:bold;
+
     border-bottom:1px solid #ddd;
+
     padding-bottom:8px;
+
     margin-bottom:10px;
+
 }
 
 .member{
+
     font-size:17px;
+
     line-height:1.8;
+
 }
 
 </style>
@@ -79,7 +103,9 @@ button{
 
 <div class="container">
 
-<h1>근무편성 조회</h1>
+<h1>
+근무편성 조회
+</h1>
 
 <input
 type="date"
@@ -88,16 +114,12 @@ onchange="searchWork()">
 
 <div class="button-group">
 
-<button onclick="moveDate(-1)">
-어제
+<button id="prevBtn" onclick="moveDate(-1)">
+◀ 어제
 </button>
 
-<button onclick="searchWork()">
-조회
-</button>
-
-<button onclick="moveDate(1)">
-내일
+<button id="nextBtn" onclick="moveDate(1)">
+내일 ▶
 </button>
 
 </div>
@@ -106,7 +128,7 @@ onchange="searchWork()">
 
 </div>
 
-<script src="script.js?v=3"></script>
+<script src="script.js?v=4"></script>
 
 </body>
 
