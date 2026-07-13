@@ -97,10 +97,10 @@ function updateMoveButtons(){
     next.setDate(next.getDate()+1);
 
     document.getElementById("prevBtn").innerHTML =
-        `◀ 어제 (${prev.getDate()}일)`;
+        `◀ PRE (${prev.getDate()}일)`;
 
     document.getElementById("nextBtn").innerHTML =
-        `내일 (${next.getDate()}일) ▶`;
+        `NEXT (${next.getDate()}일) ▶`;
 
 }
 
