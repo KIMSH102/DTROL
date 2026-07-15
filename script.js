@@ -214,17 +214,19 @@ function searchWork(){
 
 
 
-    html += makeBox(
+const weekNames = ["일","월","화","수","목","금","토"];
 
-        "날짜",
+html += makeBox(
 
-        [
+    "날짜",
 
-        `${target.getFullYear()}년 ${target.getMonth()+1}월 ${target.getDate()}일`
+    [
 
-        ]
+    `${target.getFullYear()}년 ${target.getMonth()+1}월 ${target.getDate()}일 (${weekNames[target.getDay()]})`
 
-    );
+    ]
+
+);
 
 
 
