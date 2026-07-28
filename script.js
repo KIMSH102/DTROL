@@ -174,25 +174,57 @@ function searchWork(){
             ((weekIndex%3)+3)%3
         ];
 
-    const remain =
-        dayRotation.filter(
-            team => team !== dayTeam
-        );
 
-    let nightTeam;
-    let offTeam;
+// 주간 순환
+const dayRotation = [
+    "병반",
+    "을반",
+    "갑반"
+];
 
-    if(diff%2===0){
+// 야간 시작 순환
+const nightRotation = [
+    "갑반",
+    "병반",
+    "을반"
+];
 
-        nightTeam = remain[1];
-        offTeam = remain[0];
+const weekIndex = Math.floor(diff / 7);
 
-    }else{
+// 이번 주 주간
+const dayTeam =
+    dayRotation[
+        ((weekIndex % 3) + 3) % 3
+    ];
 
-        nightTeam = remain[0];
-        offTeam = remain[1];
+// 이번 주 첫날 야간
+const firstNight =
+    nightRotation[
+        ((weekIndex % 3) + 3) % 3
+    ];
 
-    }
+// 이번 주 첫날 비번
+const firstOff =
+    dayRotation.find(
+        team =>
+            team !== dayTeam &&
+            team !== firstNight
+    );
+
+let nightTeam;
+let offTeam;
+
+if((diff % 7) % 2 === 0){
+
+    nightTeam = firstNight;
+    offTeam = firstOff;
+
+}else{
+
+    nightTeam = firstOff;
+    offTeam = firstNight;
+
+}
 
     let html = "";
 
